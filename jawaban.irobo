@@ -1,0 +1,58 @@
+﻿#langkah kerja 1
+forward(3)
+if (frontIsObstacle)
+{right}
+#Kesimpulan :karakter robomind  maju 3 langkah atau kotak akan menghadap ke kanan jika ada halangan di depannya,jika kalau tidak ada halangan di depan karater robomind maka karakter robo tidak menghadap ke kanan.
+
+#langkah kerja 2
+forward(2)
+if (frontIsObstacle)
+{right} 
+else {forward(1)}
+#Kesimpulan : karakter robomind maju 2 langkah ketika ada halangan di depan maka akan menghadap ke kanan dan maju 1 langkah,jika karakter robomind maju 2 langkah dan tidak halangan maka tidak akan menghadap ke kanan,tetapi di tambahkan perintah maju 1 langkah.
+
+#langkah kerja 3
+if (frontIsBeacon)
+{east(2)} 
+else if (frontIsClear) 
+{west(2)} 
+else if (~frontIsBeacon)
+{south(2)}
+#Kesimpulan : Jika di depan karakter robomind terdapat beacon maka karakter robo akan bergerak kearah timur (sesuai arah map)maka akan bergerak sebanyak 2 langkah,jika tidak ada beacon maka karakter robo tidak akan bergerak kea rah timur.selanjutnya karakter robomind mengecek apakah di depannya ada halangan maka robomind bergerak kearah barat sebanyak 2 langkah (sesuai arah map),jika di depan terdapat beacon maka karakter robomind akan bergerak kearah selatan sesuai arah map jika tidak terdapat beacon maka robomind tidak akan bergerak kearah selatan.
+
+#langkah kerja 4
+paintWhite
+repeat(4)
+{forward(2)right}
+stopPainting
+#Kesimpulan : karakter robomind menggunakan kuas cat berwarna putih kemudian karakter bergerak maju sebanyak 2 langkah dan menghadap ke kanan kemudian mengulanginya sebanyak 4 kali dan di akhiri dengan berhenti mengecat.
+
+#langkah kerja 5
+paintWhite
+repeat(4){
+forward(2)
+repeat(3)
+{forward(1)left}}
+stopPainting
+#Kesimpulan : karakter robomind menggunakan kuas cat putih dan maju 2 langkah di ulangi sebanyak 1 kali,kemudian karakter robomind menghadap ke kiri dan maju 1 langkah di ulangi sebanyak 3 kali.selanjutnya keseluruhan perintah-perintah sebelumnya di ulangi sebanyak 4 kali setalah itu karakter robomind di akhiri dengan perintah berhenti mengecat.
+
+#langkah kerja 6
+repeatWhile(leftIsObstacle)
+{forward(1)}
+if (leftIsWhite)
+{left
+forward(1)}
+#Kesimpulan : jika di sebelah kiri karakter robomind terdapat halangan maka akan maju 1 langkah jika tidak halangan maka karakter robo hanya akan melihat ke arah kiri dan jika di sebalah kiri karakter robomind ada cat putih maka robo akan menghadap ke kiri dan maju 1 langkah, jika tidak ada cat putih di sebelah kiri robo maka robomind hanya akan melihat ke sebalah kiri.
+
+#langkah kerja 7
+repeat()
+{forward(1)
+if (leftIsWhite)
+{break}}
+if (leftIsWhite)
+{left
+forward(1)}
+#Kesimpulan : karakter robomind maju 1 langkah dan mengecek di sebalah kirinya ada cat warna putih,jika ada cat putih maka robomind akan berhenti bergerak.selanjutnya karakter robomind akan melihat ke kiri jika ada cat putih,maka akan menghadap kekiri dan maju 1 langkah,jika tidak ada cat maka robo hanya akan melihat kearah kiri dan ulangi terus-menerus.
+
+
+
